@@ -1,0 +1,19 @@
+cmd:
+
+temporary
+
+set PYTHONPATH=%PYTHONPATH%;%CD%
+
+permanent
+
+setx PYTHONPATH "%PYTHONPATH%;%CD%"
+
+
+
+powershell:
+
+```shell
+$env:PYTHONPATH="$env:PYTHONPATH;$PWD"
+[Environment]::SetEnvironmentVariable("PYTHONPATH", "$env:PYTHONPATH;$PWD", [EnvironmentVariableTarget]::User)
+
+```

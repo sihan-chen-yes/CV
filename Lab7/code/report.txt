@@ -1,0 +1,43 @@
+# Lab7
+
+## 1.SfM
+
+### Results
+
+```Python
+  # init_images = [3, 4]
+  init_images = [5, 6]
+```
+
+If started with initial picture 3 and 4, the results is not so good which is a little bit skew.
+
+![SfM_org](./report.assets/SfM_org.png)After changing to 5 and 6 as initial pictures, the results is shown below.
+
+#### front
+
+![SfM_front](./report.assets/SfM_front-1702776191610-4.png)
+
+#### right
+
+![SfM_right](./report.assets/SfM_right.png)
+
+#### up
+
+![SfM_up](./report.assets/SfM_up.png)
+
+
+
+## 2.RANSAC
+
+### Results
+
+We can see RANSAC method is nearly not influenced by outliers compared to least-squares method.
+
+|      | ground truth | least-squares | RANSAC      |
+| ---- | ------------ | ------------- | ----------- |
+| k    | 1            | 0.61596566    | 0.98938248  |
+| b    | 10           | 8.96172714    | 10.02746807 |
+
+![image-20231210132638545](./report.assets/image-20231210132638545.png)
+
+![image-20231210132700875](./report.assets/image-20231210132700875.png)
